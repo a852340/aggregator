@@ -1,0 +1,11 @@
+name: Test Env
+on:
+  workflow_dispatch:
+jobs:
+  execute-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Echo Env
+      run: |
+        echo ${{ secrets.GIST_ID }}
